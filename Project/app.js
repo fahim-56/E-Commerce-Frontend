@@ -19,7 +19,7 @@ const displayProduct = (Products) => {
         div.innerHTML = `
             <img class="image" src=${Product.image} alt="" />
             <h4>Product Name: ${Product.title}</h4>
-            <h4>Price: ${Product.price}</h4>
+            <h4>Price: $${Product.price}</h4>
             <div style="display: flex;">
                 <i class="fa-regular fa-star"></i>
                 <p>Product Rating: ${Product.rating.rate}</p>
@@ -32,7 +32,7 @@ const displayProduct = (Products) => {
             <div class="btn">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop-${Product.id}" 
                         class="btn1">Details</button> 
-                <button onclick="AddToCart('${Product.title}','${Product.price}')" class="btn2">Add to cart</button>
+                <button onclick="AddToCart('${Product.title}','S${Product.price}')" class="btn2">Add to cart</button>
             </div>
 
             <div class="modal fade" id="staticBackdrop-${Product.id}" data-bs-backdrop="static" 
@@ -45,7 +45,7 @@ const displayProduct = (Products) => {
                         </div>
                         <div class="modal-body">
                             <img class="image" src=${Product.image} alt="" />
-                            <h4>Price: ${Product.price}</h4>
+                            <h4>Price: $${Product.price}</h4>
                             <p><b>Product discriptions: </b> ${Product.description}</p>
                             <p><b>Product Rating: </b>${Product.rating.rate}</p>
                             <p><b>Product Sold: </b>${Product.rating.count}</p>
